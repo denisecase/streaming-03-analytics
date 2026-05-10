@@ -5,6 +5,12 @@ validates them against the data contract,
 writes rejected records to a local CSV file,
 and sends valid records to a Kafka topic one message at a time.
 
+Start with main() at the bottom.
+Work up to see how it all fits together.
+
+Many functions are standard helpers
+and should not need project-specific modifications.
+
 Author: Denise Case
 Date: 2026-05
 
@@ -124,6 +130,9 @@ def load_settings() -> KafkaSettings:
 def verify_connection(settings: KafkaSettings) -> None:
     """Verify Kafka is reachable before doing anything else.
 
+    Arguments:
+        settings: KafkaSettings instance with connection info.
+
     Raises:
         SystemExit: If Kafka is not reachable.
     """
@@ -139,6 +148,9 @@ def verify_connection(settings: KafkaSettings) -> None:
 def load_reference_data() -> tuple[set[str], set[str]]:
     """Load and validate reference data.
 
+    Right now we just load region and product reference data for validation,
+    but you can add more reference data and validation rules as needed.
+
     Returns:
         A tuple of (valid_region_ids, valid_product_ids).
 
@@ -146,24 +158,57 @@ def load_reference_data() -> tuple[set[str], set[str]]:
         SystemExit: If any reference file is missing or invalid.
     """
     LOG.info("Loading validation reference data...")
-    region_records = read_csv_rows(REGIONS_CSV)
-    product_records = read_csv_rows(PRODUCTS_CSV)
 
+    # initialize an empty list to collect validation error messages (strings)
     errors: list[str] = []
-    errors.extend(
-        validate_reference_records(
-            records=region_records,
-            required_fields=REGIONS_REQUIRED_FIELDS,
-            label="regions.csv",
-        )
+
+    # Use the read_csv_rows function()
+    # to read from reference tables in data/
+
+    # -----------------------------------------------------
+    # === LOAD REGION VALIDATION DATA (see regions.csv) ===
+    # -----------------------------------------------------
+
+    # For example, get a list of region records.
+    # Each one is a dictionary of fieldname to value,
+    # like {"region_id": "US-MO", "region_name": "Missouri"}.
+    region_records: list[dict[str, str]] = read_csv_rows(REGIONS_CSV)
+
+    # validate the region records against the data contract rules for regions.csv
+    # get back an empty list if all records are valid,
+    # or a list of error messages if any problems
+    region_error_list = validate_reference_records(
+        records=region_records,
+        required_fields=REGIONS_REQUIRED_FIELDS,
+        label="regions.csv",
     )
-    errors.extend(
-        validate_reference_records(
-            records=product_records,
-            required_fields=PRODUCTS_REQUIRED_FIELDS,
-            label="products.csv",
-        )
+
+    # Extend the main errors list with any errors found in the region records.
+    errors.extend(region_error_list)
+
+    # -----------------------------------------------------
+    # === LOAD PRODUCT VALIDATION DATA (see products.csv) ===
+    # -----------------------------------------------------
+
+    # Get a list of product records.
+    # Each one is a dictionary of fieldname to value,
+    # like {"product_id": "P001", "product_name": "Product 1"}.
+    product_records: list[dict[str, str]] = read_csv_rows(PRODUCTS_CSV)
+    product_record_error_list = validate_reference_records(
+        records=product_records,
+        required_fields=PRODUCTS_REQUIRED_FIELDS,
+        label="products.csv",
     )
+    errors.extend(product_record_error_list)
+
+    # -----------------------------------------------------
+    # What other reference tables are available?
+    # -----------------------------------------------------
+    # Consider expanding this to provide additional validation rules.
+
+    # -----------------------------------------------------
+    # AFTER LOADING ALL REFERENCE DATA, CHECK FOR ANY ERRORS
+    # -----------------------------------------------------
 
     if errors:
         for error in errors:
@@ -171,12 +216,17 @@ def load_reference_data() -> tuple[set[str], set[str]]:
         LOG.error("Reference data failed validation. Fix reference files first.")
         raise SystemExit(1)
 
+    # -----------------------------------------------------
+    # MAKE LOOKUP SETS OF VALID IDS FOR LATER VALIDATION OF SALES MESSAGES
+    # -----------------------------------------------------
+
     valid_region_ids = make_lookup_set(region_records, "region_id")
+    LOG.info(f"Found {len(valid_region_ids)} valid regions, ")
+
     valid_product_ids = make_lookup_set(product_records, "product_id")
-    LOG.info(
-        f"Found {len(valid_region_ids)} valid regions, "
-        f"{len(valid_product_ids)} valid products."
-    )
+    LOG.info(f"{len(valid_product_ids)} valid products.")
+
+    # return the results as a tuple of two sets
     return valid_region_ids, valid_product_ids
 
 
@@ -188,8 +238,10 @@ def load_reference_data() -> tuple[set[str], set[str]]:
 def get_message_key(message: dict[str, Any]) -> str:
     """Return the Kafka message key for a sale record.
 
-    We use region_id as the key so all sales from the same region
-    go to the same Kafka partition, keeping them in order.
+    We use region_id as the message key
+    so all sales from the same region
+    go to the same Kafka partition,
+    keeping them in order.
     """
     try:
         return str(message["region_id"])
@@ -219,7 +271,12 @@ def generate_messages(count: int) -> Generator[dict[str, str]]:
 
 
 def write_rejected_record(record: DataRecordDict, errors: list[str]) -> None:
-    """Write one rejected record to the rejected output CSV."""
+    """Write one rejected record to the rejected output CSV.
+
+    Arguments:
+        record: The original message that failed validation.
+        errors: A list of validation error messages to include in the output.
+    """
     append_csv_row(
         path=REJECTED_SALES_CSV,
         row=add_validation_errors(record=record, errors=errors),
@@ -228,11 +285,21 @@ def write_rejected_record(record: DataRecordDict, errors: list[str]) -> None:
 
 
 def initialize_output() -> None:
-    """Initialize output directory and clear rejected CSV from prior runs."""
+    """Initialize output directory and clear rejected CSV from prior runs.
+
+    This is not typical in production, but
+    much better when experimenting.
+    """
     LOG.info("Initializing output...")
+
+    # If the output directory doesn't exist, create it.
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+
+    # if the rejected CSV already exists from a prior run,
+    # delete it and start fresh.
     if REJECTED_SALES_CSV.exists():
         REJECTED_SALES_CSV.unlink()
+
     LOG.info(f"Output directory ready: {OUTPUT_DIR.name}")
 
 
@@ -262,9 +329,11 @@ def send_messages(
     LOG.info(f"Sending up to {MESSAGE_COUNT} message(s) to topic {settings.topic!r}.")
     LOG.info("Watch each sale arrive. Press CTRL+C to stop early.\n")
 
+    # initialize counters for summary stats at the end
     sent_count = 0
     rejected_count = 0
 
+    # try to process messages, but catch any expected errors to log them and exit gracefully
     try:
         for message in generate_messages(MESSAGE_COUNT):
             LOG.info(format_message_for_log(message))
@@ -296,11 +365,16 @@ def send_messages(
             LOG.info(f"  MESSAGE SENT  sent={sent_count}")
             time.sleep(MESSAGE_INTERVAL_SECONDS)
 
+    # except if we can't process messages
+    # due to missing files, validation problems, or Kafka errors,
+    # log the error and exit gracefully.
     except (FileNotFoundError, KeyError, RuntimeError, ValueError) as error:
         LOG.error(str(error))
         LOG.error("Producer stopped before completing all messages.")
         raise SystemExit(1) from error
 
+    # At the end, return the summary stats
+    # with the count of messages sent and rejected.
     return sent_count, rejected_count
 
 

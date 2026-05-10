@@ -1,10 +1,16 @@
 """src/streaming/kafka_consumer_case.py.
 
-Kafka consumer: full pipeline example.
+Kafka consumer: analytics
 
 Reads sales messages from a Kafka topic and runs the full pipeline:
   - Validates each message against the data contract
   - Computes derived fields (subtotal, tax amount, total)
+
+Start with main() at the bottom.
+Work up to see how it all fits together.
+
+Many functions are standard helpers
+and should not need project-specific modifications.
 
 Author: Denise Case
 Date: 2026-05
@@ -136,19 +142,28 @@ def verify_topic(settings: KafkaSettings) -> None:
         SystemExit: If the topic does not exist or is empty.
     """
     LOG.info("Verifying Kafka topic...")
+
+    # Create an admin client to check if the topic exists and has messages.
     admin = create_admin_client(settings)
 
-    if not topic_exists(admin, settings.topic):
+    topic_exists_already = topic_exists(admin, settings.topic)
+
+    if not topic_exists_already:
         LOG.error(f"Topic {settings.topic!r} does not exist.")
         LOG.error("Run the producer first.")
         raise SystemExit(1)
 
-    message_count = get_topic_message_count(admin, settings.topic, settings)
     LOG.info(f"Topic {settings.topic!r} exists.")
+
+    # Call a function to get count of messages
+    # on the topic before we start consuming
+    message_count = get_topic_message_count(admin, settings.topic, settings)
+
     LOG.info(f"Found {message_count} message(s) available.")
 
     if message_count == 0:
         LOG.error("Topic is empty. Run the producer first.")
+        # Exit with a non-zero code to indicate an error.
         raise SystemExit(1)
 
 
@@ -162,6 +177,10 @@ def get_kafka_consumer(settings: KafkaSettings) -> Any:
     """
     LOG.info("Creating Kafka consumer...")
     consumer = create_consumer(settings)
+
+    # call consumer.subscribe() with an on_assign callback
+    # to reset offsets to the beginning
+    # This ensures the example reads all available messages every time it runs.
     consumer.subscribe(
         [settings.topic],
         on_assign=lambda c, partitions: c.assign(
@@ -185,7 +204,7 @@ def get_kafka_consumer(settings: KafkaSettings) -> Any:
 
 
 def initialize_output() -> RunningStats:
-    """Initialize output directory, CSV, database, chart, and stats.
+    """Initialize output directory, CSV, and stats.
 
     Returns:
         A RunningStats instance.
@@ -240,20 +259,22 @@ def process_message(
     Returns:
         The enriched row, or None if validation failed.
     """
+    # First, validate the message against the data contract.
+    # If validation fails, return None to indicate the message should be rejected.
     errors = validate_required_fields(record=row, required_fields=SALES_REQUIRED_FIELDS)
     if errors:
         LOG.warning(f"Validation failed for order {row.get('order_id', '?')}")
         LOG.warning(f"errors={errors}")
         return None
 
+    # Then, enrich the message with derived fields.
     enriched = enrich_message(row, region_lookup)
-    LOG.info(
-        f"subtotal={enriched['subtotal']}  "
-        f"tax={enriched['tax_amount']}  "
-        f"total={enriched['total']}  "
-        f"running_total={stats.total + enriched['total']:.2f}"
-    )
+    LOG.info(f"subtotal={enriched['subtotal']}")
+    LOG.info(f"tax={enriched['tax_amount']}")
+    LOG.info(f"total={enriched['total']}")
+    LOG.info(f"running_total={stats.total + enriched['total']:.2f}")
 
+    # Update running statistics with the new total.
     stats.update(enriched["total"])
     return enriched
 

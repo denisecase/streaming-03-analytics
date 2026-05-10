@@ -1,12 +1,15 @@
 """src/streaming/data_validation/data_validation_case.py.
 
-Project-specific validation extensions for streaming-06-scenarios.
+Project-specific validation extensions.
 
 Generic validation helpers live in datafun-streaming.
 Add domain-specific validators here as requirements evolve.
 
 OBS:
-  Add functions to this file as validation requirements evolve.
+  Don't edit this file - it should remain a working example.
+  Copy it, rename it data_validation_yourname.py, and modify your copy.
+  Change __all__ to export your custom validators.
+  Then, import your custom validators from your file.
 """
 
 # === DECLARE IMPORTS ===
@@ -18,6 +21,11 @@ from datafun_streaming.data_validation.reference import (
 from datafun_streaming.data_validation.validation_utils import add_validation_errors
 
 # === DECLARE EXPORTS ===
+
+# Use the built-in __all__ variable to declare a list of
+# public objects that this module exports.
+# This is a common Python convention that helps other developers understand
+# which functions are intended for use outside this module.
 
 __all__ = [
     "add_validation_errors",

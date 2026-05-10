@@ -47,8 +47,8 @@ uvx pre-commit run --all-files
 Run checks and build documentation:
 
 ```shell
-uv run python -m ruff format .
-uv run python -m ruff check . --fix
+uv run ruff format .
+uv run ruff check . --fix
 uv run python -m pyright
 uv run python -m pytest
 uv run python -m zensical build

@@ -6,11 +6,20 @@ Contains functions that compute fields not present in the raw Kafka message.
 These fields are calculated by the consumer from the raw message fields
 and the reference data (regions.csv).
 
+This file provides a few examples of derived field calculations,
+but you are encouraged to add more as needed.
+
+We add total_price, tax_amount, and total as derived fields in this example.
+
 The producer sends raw measurements only.
 The consumer is responsible for all derived calculations.
 
 Author: Denise Case
 Date: 2026-05
+
+OBS:
+  You can add functions and extend this file OR
+  copy it to your own module and modify your copy.
 """
 
 # === DECLARE IMPORTS ===
@@ -19,6 +28,11 @@ import logging
 from typing import Any, Final
 
 # === DECLARE EXPORTS ===
+
+# Use the built-in __all__ variable to declare a list of
+# public objects that this module exports.
+# This is a common Python convention that helps other developers understand
+# which functions are intended for use outside this module.
 
 __all__ = [
     "TAX_RATE_DEFAULT",
@@ -74,6 +88,9 @@ def enrich_message(
 
     Computes total_price and tax_amount from the raw message fields
     and the region lookup table.
+
+    As you add more derived fields,
+    extend this function to provide them as well.
 
     Arguments:
         row: A validated raw message row.
