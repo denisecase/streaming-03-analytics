@@ -219,11 +219,9 @@ git push -u origin main
 Open another VS Code terminal. Rename it `consumer`.
 If running Windows, use **PowerShell**.
 Run the commands one at a time.
-Verify Kafka is reachable, then start the consumer.
+Clear the terminal, then start the consumer.
 
 ```shell
-Test-NetConnection -ComputerName localhost -Port 9092
-
 clear
 uv run python -m streaming.kafka_consumer_case
 ```

@@ -246,6 +246,8 @@ def process_message(
 ) -> dict[str, Any] | None:
     """Process one consumed message.
 
+    Arguments after the asterisk must be passed as keyword arguments.
+
     Steps:
       - Validate required fields
       - Enrich with derived fields
@@ -353,7 +355,7 @@ def consume_messages(
     return consumed_count, skipped_count
 
 
-def save_artifacts(figure: Any) -> None:
+def save_artifacts() -> None:
     """Save output artifacts."""
     LOG.info("Saving artifacts...")
     log_path(LOG, "WROTE OUTPUT_CSV", OUTPUT_CSV)
