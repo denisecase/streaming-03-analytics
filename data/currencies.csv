@@ -1,0 +1,4 @@
+currency_code,currency_name,symbol,exchange_rate_to_usd,rate_date
+USD,US Dollar,$,1.000000,2026-05-01
+CAD,Canadian Dollar,$,0.730000,2026-05-01
+MXN,Mexican Peso,$,0.051000,2026-05-01

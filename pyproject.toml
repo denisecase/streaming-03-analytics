@@ -1,0 +1,172 @@
+# ============================================================
+# pyproject.toml (Python project configuration)
+# ============================================================
+# Updated: 2026-04-15
+# REQ.PYTHON: Python projects MUST include pyproject.toml as the single source of truth.
+# WHY: Centralizes project configuration.
+# CUSTOM: Update identity and build tool src folders.
+
+# ============================================================
+# SECTION 1: PROJECT IDENTITY (name, version, CUSTOM dependencies)
+# ============================================================
+
+[project]
+name = "streaming-03-analytics" # Package distribution name (lowercase and dashes).
+readme = "README.md"
+requires-python = ">=3.14"
+version = "0.3.0"
+
+dependencies = [
+    # REQ.DEPS: External packages used by the project code.
+    "confluent-kafka", # WHY: Kafka client library for Python in 2026-May.
+    "datafun-toolkit", # WHY: Custom utility library for privacy-aware logging
+    "datafun-streaming", # WHY: Custom library with shared streaming code and types.
+    "duckdb", # WHY: In-memory database for testing and prototyping.
+    "matplotlib", # WHY: Static plotting library for quick visualizations.
+    "python-dotenv", # WHY: Load environment variables from .env files for configuration.
+]
+
+[project.optional-dependencies]
+# WHY: Optional dependency groups keep the core install clean and focused.
+dev = [
+    # REQ.DEV.DEPS: External packages used for linting, testing, type checking, etc.
+    "pre-commit",
+    "pyright",
+    "pytest",
+    "pytest-cov",
+    "ruff",
+]
+
+docs = [
+    # REQ.DOCS.DEPS: External packages used to generate project documentation.
+    "mkdocstrings[python]", # WHY: Auto-generate API docs from docstrings.
+    "zensical", # WHY: Generate and maintain project documentation.
+]
+
+# ============================================================
+# SECTION 2: TOOL CONFIGURATION (Professional basics)
+# ============================================================
+
+# === PYRIGHT (TYPE CHECKING HELPS FIND COMMON ERRORS BEFORE THE CODE RUNS) ===
+
+[tool.pyright]
+# CUSTOM: Pyright configuration for static type checking.
+# WHY: Strict type checking helps catch bugs early.
+include = ["src"] # WHY: Include both source and test code for comprehensive type checking.
+extraPaths = ["src"] # WHY: Ensure imports are resolved relative to src/ for consistent behavior across environments.
+exclude = ["**/node_modules", "**/.*", ".venv", "**/__pycache__", "dist", "build"]
+pythonVersion = "3.13" # 3.14 stubs incomplete in current pyright
+reportMissingTypeStubs = "none" # WHY: Avoid warnings from third-party libraries without type stubs.
+reportMissingImports = "warning" # WHY: Warn about missing imports to catch potential issues, but allow flexibility in notebooks and dynamic code.
+reportPrivateUsage = "none" # WHY: Allow usage of private members (e.g., _version.py) without warnings, common in Python projects.
+reportUntypedClassDecorator = "none"  # @dataclass stubs incomplete in current pyright
+reportArgumentType = "none"           # len() resolves to collections.abc, pyright bug
+reportUnknownMemberType = "none"      # WHY: confluent_kafka + duckdb stub gaps
+reportUnknownVariableType = "none"    # WHY: confluent_kafka + duckdb stub gaps
+reportCallIssue = "none"              # WHY: @dataclass frozen in KafkaSettings
+typeCheckingMode = "basic" # strict | basic | off
+
+[[tool.pyright.executionEnvironments]]
+root = "tests"
+reportUnknownMemberType = "none"
+reportUnknownVariableType = "none"
+reportUnknownParameterType = "none"
+reportMissingParameterType = "none"
+reportUnknownArgumentType = "none"
+
+
+# === PYTEST (VERIFY LOGIC) ===
+
+[tool.pytest.ini_options]
+# WHY: Consistent test discovery and coverage visibility.
+minversion = "9.0"
+testpaths = ["tests"]
+addopts = " --cov=src --cov-report=term-missing"
+
+# === RUFF (PYTHON FORMATTING AND LINTING) ===
+
+[tool.ruff]
+# WHY: Fast linting and formatting in one tool.
+exclude = [
+    "*.egg-info",
+    "**/.venv",
+    ".venv",
+    "__pycache__",
+    "site",
+]
+line-length = 88 # WHY: PEP 8 standard, wrap when possible.
+preview = false # WHY: Stable features only; avoid preview features.
+target-version = "py314" # WHY: Match latest supported Python version.
+unsafe-fixes = false # WHY: Avoid potentially unsafe automatic fixes.
+
+[tool.ruff.format]
+# WHY: Formatter choices should be stable to keep diffs small and predictable.
+indent-style = "space" # See also .gitattributes for indent style.
+line-ending = "auto" # Match existing files and let .gitattributes handle it.
+quote-style = "preserve" # Preserve existing quote styles to minimize churn.
+
+[tool.ruff.lint]
+# WHY: Professional baseline rules without requiring advanced refactors.
+select = [
+    "E",   # Basic syntax and structural correctness
+    "F",   # Undefined names and unused imports
+    "W",   # Warnings that catch easy issues early
+    "I",   # Import ordering
+    "UP",  # Modern Python constructs
+    "B",   # Common bug-prone patterns
+    "PTH", # Prefer pathlib patterns
+
+    # TEMPORARY: Stricter categories for maintainers and local development (not CI).
+    "C4",  # Comprehension correctness and clarity
+    "SIM", # Simplify obvious complexity
+    "RET", # Return practices
+
+    "D", # Docstring standards (see convention below)
+    "D417", # Enforce Google-style docstring sections (Args, Returns, etc.)
+    "S", # Security checks (with deliberate exceptions)
+
+]
+ignore = [
+    "E501", # line length handled by formatter
+    "D203", # conflicts with D211
+    "D213", # conflicts with D212 (Google standard summary placement)
+    "S101", # allow assert (tests + internal invariants)
+    "S311", # allow subprocess (not used, but common in data projects and not inherently unsafe)
+]
+
+[tool.ruff.lint.isort]
+# WHY: Ordering imports helps keep code diffs (differences) readable.
+force-sort-within-sections = true
+
+# === PER-FILE IGNORES (DEPENDS ON DOCSTRING POLICY) ===
+
+[tool.ruff.lint.per-file-ignores]
+# WHY: Some files must not be auto-modified.
+"src/**/__init__.py" = ["F401"]     # Allow re-export patterns
+"src/**/_version.py" = ["ALL"]      # Auto-generated file (do not lint)
+"tests/**/*.py" = ["D", "B018", "B011", "S101"]
+"src/**/py.typed" = ["ALL"]
+"notebooks/**/*.ipynb" = ["F821"]   # Notebooks may have runtime-defined names
+
+# === CHOOSE PROJECT DOC STYLE ===
+
+[tool.ruff.lint.pydocstyle]
+# REQ: Google style is the project-wide docstring convention.
+convention = "google"   # ALT: "numpy" - choose one, never mix.
+
+# ============================================================
+# SECTION 3: BUILD SYSTEM (boilerplate; CUSTOM src/ agreement)
+# ============================================================
+#
+# REQ.PROJECT: A build system MUST be declared for package discovery and publishing.
+# REQ.STRUCTURE: All importable code MUST live under src/.
+# WHY src/ layout: Prevents accidental imports from the repo root;
+#     ensures consistent behavior across IDEs, tests, CI, and PyPI.
+
+[build-system]
+build-backend = "hatchling.build"
+requires = ["hatchling"]
+
+[tool.hatch.build.targets.wheel]
+# CUSTOM: Must match src/ folders.
+packages = ["src/streaming"]  # REQ.PACKAGES: Discovery rooted at src/.

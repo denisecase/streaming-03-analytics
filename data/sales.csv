@@ -1,0 +1,179 @@
+order_id,datetime,region_id,currency_code,product_id,unit_price,quantity,is_online,customer_id,is_new_customer,device_type,payment_method,referral_source,discount_code,customer_note
+e7324981-a9f0-419f-b708-d0a333451fff,2026-05-04T08:11:00Z,US-TX,USD,PY-STREAM-005,59.99,3,true,CUST-4150,false,tablet,paypal,paid_search,,Gift for my team
+d61943e0-f543-4b5f-9c9a-18605ea4cfe5,2026-05-04T08:23:00Z,US-TX,USD,PY-DATA-002,49.99,1,true,CUST-1106,false,mobile,paypal,paid_search,,Gift for my team
+14da1915-8e74-47be-9e10-f7275d31af46,2026-05-04T08:28:00Z,CA-QC,CAD,PY-NLP-006,54.99,1,true,CUST-2133,false,desktop,paypal,organic,,Learning at my own pace
+d77ed935-9b28-431d-bc25-0a3fd98f4154,2026-05-04T08:40:00Z,US-CA,USD,PY-STREAM-005,59.99,1,true,CUST-5333,false,mobile,paypal,organic,,Highly recommend
+24b91995-25f8-4ad7-8fa6-2e4c15750e5e,2026-05-04T08:41:00Z,US-MO,USD,PY-VIZ-003,39.99,1,true,CUST-8573,false,mobile,apple_pay,paid_search,,Learning at my own pace
+1ec0fc8b-998c-4f43-8a66-19e1fa7d5fa8,2026-05-04T08:54:00Z,CA-ON,CAD,PY-SQL-004,44.99,1,true,CUST-8062,false,tablet,paypal,organic,,
+392dd49b-b385-499c-9b4a-a38387fa39ae,2026-05-04T09:07:00Z,CA-ON,CAD,PY-INTRO-001,29.99,1,false,CUST-9348,false,desktop,credit_card,paid_search,,For my study group
+02782ab7-dd7d-4ebe-8abc-ef81cdc4193b,2026-05-04T09:15:00Z,US-CA,USD,PY-VIZ-003,39.99,1,true,CUST-5889,false,tablet,paypal,organic,,
+67bd3492-cc96-429a-9a91-1b4d2132d261,2026-05-04T09:19:00Z,CA-ON,CAD,PY-VIZ-003,39.99,1,true,CUST-4770,false,desktop,credit_card,paid_search,,Excellent content
+0a021628-6937-4876-8875-b00c07a39e0f,2026-05-04T09:37:00Z,MX-CMX,MXN,PY-DATA-002,49.99,1,true,CUST-6168,false,desktop,paypal,organic,,
+b05fc600-a5fc-4826-934c-cc1f188b0715,2026-05-04T09:42:00Z,US-MO,USD,PY-DATA-002,49.99,3,true,CUST-3340,false,tablet,credit_card,organic,,Recommended by a colleague
+03d437fb-6966-47ad-a67a-728630c8b3f8,2026-05-04T10:06:00Z,US-MO,USD,PY-INTRO-001,29.99,1,true,CUST-8668,false,mobile,apple_pay,email,,
+6914aea4-448f-4dc1-b68f-0fe4a2c06188,2026-05-04T10:15:00Z,US-TX,USD,PY-DATA-002,49.99,1,true,CUST-2827,false,tablet,credit_card,organic,,Learning at my own pace
+e1adb233-3aa8-4d60-9684-1ddf52e9d656,2026-05-04T10:16:00Z,US-MO,USD,PY-STREAM-005,59.99,5,false,CUST-4295,false,desktop,paypal,organic,,For my study group
+80e9a9ea-9add-4d51-981a-d26aaacd4dc9,2026-05-04T10:30:00Z,US-MO,USD,PY-DATA-002,49.99,1,true,CUST-8953,false,desktop,credit_card,social,,For my study group
+68920c43-44f0-4e51-bd21-7904c9427810,2026-05-04T10:43:00Z,CA-ON,CAD,PY-INTRO-001,29.99,1,true,CUST-1488,true,mobile,apple_pay,organic,,
+d22acb5c-8fa2-437a-be68-16a3407c5919,2026-05-04T10:43:00Z,US-MO,USD,PY-SQL-004,44.99,1,true,CUST-1319,false,desktop,credit_card,social,,Recommended by a colleague
+89715d88-8d25-4fee-9179-438fe49ebd60,2026-05-04T11:00:00Z,US-TX,USD,PY-INTRO-001,29.99,1,true,CUST-6977,false,desktop,credit_card,email,,For my study group
+733e6b9b-c9e7-49ef-82d8-b976d0df90cc,2026-05-04T11:06:00Z,MX-CMX,MXN,PY-INTRO-001,29.99,1,true,CUST-9099,false,desktop,paypal,paid_search,,Learning at my own pace
+267b5686-afa9-4ce6-bf68-4b861afa6a29,2026-05-04T11:10:00Z,US-MO,USD,PY-NLP-006,54.99,5,true,CUST-4878,true,mobile,apple_pay,email,,Learning at my own pace
+d6710a67-a351-4185-8d11-3b4e71407f5b,2026-05-04T11:12:00Z,US-TX,USD,PY-STREAM-005,59.99,1,true,CUST-7570,true,mobile,credit_card,email,,Excellent content
+cbe8f6e2-a71e-4d62-9004-4dbbf6eb5cfe,2026-05-04T11:15:00Z,US-MO,USD,PY-INTRO-001,29.99,5,false,CUST-8973,false,desktop,credit_card,email,,Expected more content
+09bc34b3-c566-400b-bc7b-c114a4a63983,2026-05-04T11:23:00Z,CA-ON,CAD,PY-SQL-004,44.99,1,true,CUST-1158,false,mobile,credit_card,organic,,Love the examples
+891a7917-4541-457a-b0d5-45a3cd33a260,2026-05-04T11:27:00Z,US-MO,USD,PY-STREAM-005,59.99,1,true,CUST-1832,false,mobile,apple_pay,organic,,
+5c877bff-f1b6-467b-abc4-23b946a24014,2026-05-04T11:28:00Z,CA-QC,CAD,PY-INTRO-001,29.99,1,true,CUST-6974,false,tablet,paypal,email,,For my study group
+a62c8c45-e0a4-4697-8ca7-b173c7f4487e,2026-05-04T11:39:00Z,US-MO,USD,PY-INTRO-001,29.99,1,true,CUST-9701,false,mobile,credit_card,organic,,Good but could go deeper
+3ae2798c-087b-473c-b120-d2c9d0f7289b,2026-05-04T11:40:00Z,US-TX,USD,PY-INTRO-001,29.99,1,true,CUST-5033,true,tablet,credit_card,organic,,For my study group
+fbf2b25f-c658-4716-88e7-e5574bb71a39,2026-05-04T11:41:00Z,CA-ON,CAD,PY-NLP-006,54.99,1,true,CUST-5065,true,tablet,paypal,email,,Good but could go deeper
+9eb81520-7ef0-4b18-b6d8-a6083cd5ca58,2026-05-04T11:43:00Z,US-CA,USD,PY-STREAM-005,59.99,1,true,CUST-3414,false,desktop,credit_card,organic,,
+2eb467ee-85d9-4ac5-b9d8-376bbba7770b,2026-05-04T11:57:00Z,US-MO,USD,PY-INTRO-001,29.99,1,true,CUST-9785,false,mobile,paypal,social,,Love the examples
+b7c4cb3b-3a5d-434c-b737-20be9efb1c72,2026-05-04T12:03:00Z,US-TX,USD,PY-INTRO-001,29.99,1,true,CUST-2604,false,mobile,apple_pay,paid_search,,For my study group
+ea5b5880-1df0-4918-8134-bc18553bedaa,2026-05-04T12:08:00Z,CA-ON,CAD,PY-INTRO-001,29.99,1,true,CUST-4728,true,desktop,paypal,paid_search,,Already applying this at work
+d71f2498-1b58-4d6c-8613-e03125f655be,2026-05-04T12:23:00Z,US-CA,USD,PY-VIZ-003,39.99,1,true,CUST-7653,false,mobile,apple_pay,social,,
+6cf3770d-340a-4b36-a1ff-c0e73ceaaf0e,2026-05-04T12:24:00Z,US-MO,USD,PY-NLP-006,54.99,1,true,CUST-6139,false,tablet,credit_card,social,,Love the examples
+5e687b11-93d6-4999-94eb-835827055b4a,2026-05-04T12:30:00Z,US-CA,USD,PY-VIZ-003,39.99,2,true,CUST-2790,false,desktop,credit_card,social,,Very helpful
+d611de65-6c4f-4d98-be66-c2024e9b784d,2026-05-04T12:33:00Z,MX-CMX,MXN,PY-VIZ-003,39.99,1,true,CUST-7691,false,tablet,paypal,paid_search,,Very helpful
+ee5d541b-b139-427b-bbb6-cca7c33f4552,2026-05-04T12:41:00Z,US-TX,USD,PY-INTRO-001,29.99,5,false,CUST-2200,false,desktop,credit_card,social,,Great course!
+13c46aba-5aeb-496f-b169-39b2cb940b18,2026-05-04T12:42:00Z,US-TX,USD,PY-DATA-002,49.99,1,true,CUST-9486,false,mobile,apple_pay,email,,Very helpful
+a1ecdada-a22f-43fe-a98b-275327c2b035,2026-05-04T12:51:00Z,US-TX,USD,PY-SQL-004,44.99,1,true,CUST-4228,false,desktop,credit_card,organic,,
+be4612b4-429e-4573-8a1a-1b2b7cbcc28e,2026-05-04T12:58:00Z,US-MO,USD,PY-INTRO-001,29.99,1,true,CUST-8251,false,desktop,credit_card,email,,
+4f68b52f-5f79-48aa-8984-dfffe3c6f167,2026-05-04T13:17:00Z,US-CA,USD,PY-INTRO-001,29.99,1,true,CUST-5956,false,tablet,credit_card,email,,Slower than I expected
+52b2092c-89bb-428b-a7a4-2b024e7c8521,2026-05-04T13:20:00Z,US-CA,USD,PY-STREAM-005,59.99,1,true,CUST-8752,false,mobile,paypal,paid_search,,Good but could go deeper
+baabebfe-7225-412e-ad8e-25d8eea97659,2026-05-04T13:28:00Z,US-TX,USD,PY-SQL-004,44.99,2,true,CUST-5351,false,desktop,credit_card,paid_search,,Recommended by a colleague
+5e3bb592-7961-42ae-b9d0-7460a9187473,2026-05-04T13:36:00Z,CA-ON,CAD,PY-NLP-006,54.99,4,true,CUST-2891,false,desktop,paypal,paid_search,,Recommended by a colleague
+98e30deb-4608-4d70-80d6-6dfc3488abe0,2026-05-04T13:36:00Z,CA-QC,CAD,PY-STREAM-005,59.99,1,true,CUST-5050,false,desktop,paypal,paid_search,,Worth every penny
+c63829e5-d98f-4d61-94ff-9eee84858af9,2026-05-04T13:43:00Z,CA-ON,CAD,PY-DATA-002,49.99,1,true,CUST-9849,false,desktop,credit_card,paid_search,,
+e6093d4b-9f32-463a-a245-85f0c8e47fb9,2026-05-04T14:17:00Z,US-CA,USD,PY-SQL-004,44.99,3,true,CUST-8135,false,desktop,paypal,organic,,Slower than I expected
+76698ca8-703d-4ed1-ab59-159cee460b3a,2026-05-04T14:20:00Z,US-MO,USD,PY-INTRO-001,29.99,1,true,CUST-7883,false,desktop,credit_card,organic,,
+cdda7ee3-ba67-43ec-b342-66905d02c519,2026-05-04T14:20:00Z,CA-ON,CAD,PY-VIZ-003,39.99,2,true,CUST-5051,false,mobile,paypal,organic,,Highly recommend
+88e83571-ace3-4960-bbff-a31700bda114,2026-05-04T14:26:00Z,US-CA,USD,PY-STREAM-005,59.99,1,true,CUST-7071,false,desktop,paypal,email,,For my study group
+468f9779-61c8-4918-8282-4e070ae8705b,2026-05-04T14:41:00Z,US-MO,USD,PY-NLP-006,54.99,2,true,CUST-4978,false,mobile,paypal,paid_search,,
+d9ec6a6e-8155-4ce8-96c5-446f4dd41c2e,2026-05-04T14:42:00Z,MX-CMX,MXN,PY-STREAM-005,59.99,1,true,CUST-3223,false,tablet,paypal,social,,For my study group
+fe65e48b-ac48-4d17-b9ff-bfa9c123bab8,2026-05-04T14:45:00Z,MX-CMX,MXN,PY-STREAM-005,59.99,3,true,CUST-6280,false,mobile,credit_card,paid_search,,
+603a792d-8dad-446d-95b3-e77b11452681,2026-05-04T14:46:00Z,US-CA,USD,PY-VIZ-003,39.99,1,false,CUST-2402,false,mobile,credit_card,paid_search,,Learning at my own pace
+14be4fe3-4f49-40ff-9747-69d8a432f491,2026-05-04T14:51:00Z,US-TX,USD,PY-STREAM-005,59.99,1,true,CUST-2876,false,mobile,paypal,organic,,Already applying this at work
+92e3f57d-70bb-47b2-8f45-c00baa7d3759,2026-05-04T15:01:00Z,US-CA,USD,PY-STREAM-005,59.99,1,true,CUST-7625,false,desktop,credit_card,paid_search,,
+a781677c-5a0a-4179-ae0c-fcd01f8c6c18,2026-05-04T15:02:00Z,US-MO,USD,PY-STREAM-005,59.99,1,true,CUST-6325,false,tablet,paypal,paid_search,,Learning at my own pace
+31b21a55-fc47-4cfb-9d47-f60ec1e320e1,2026-05-04T15:04:00Z,CA-ON,CAD,PY-DATA-002,49.99,1,true,CUST-9595,false,mobile,credit_card,social,,
+c227653e-6b83-438b-90e9-6f1de30ec8e7,2026-05-04T15:39:00Z,US-TX,USD,PY-NLP-006,54.99,4,true,CUST-7389,false,desktop,credit_card,email,,
+a9221080-b74d-40e9-9e6e-da3a0a4eb460,2026-05-04T15:47:00Z,CA-ON,CAD,PY-SQL-004,44.99,1,true,CUST-7624,false,desktop,credit_card,paid_search,,Love the examples
+f3c86d98-dc10-4fec-8f02-cc8fc351bf8c,2026-05-04T15:58:00Z,US-CA,USD,PY-INTRO-001,29.99,2,true,CUST-5133,false,mobile,paypal,organic,,Learning at my own pace
+fbc09551-b54a-4788-b015-809bbf2dd0a2,2026-05-04T16:21:00Z,MX-CMX,MXN,PY-DATA-002,49.99,1,true,CUST-4020,false,desktop,paypal,organic,,Great course!
+ad73fc8d-3dc9-416e-b7ae-862d8f19bda5,2026-05-04T16:32:00Z,US-MO,USD,PY-DATA-002,49.99,1,true,CUST-1893,false,mobile,apple_pay,organic,,Great course!
+952398e4-34c9-43c6-9451-d52321647803,2026-05-04T16:57:00Z,US-TX,USD,PY-DATA-002,49.99,1,true,CUST-6023,false,desktop,paypal,organic,,
+2c5e0a19-8c92-49f1-873b-66f975d9ec38,2026-05-04T18:07:00Z,US-TX,USD,PY-NLP-006,54.99,1,true,CUST-2858,false,mobile,paypal,paid_search,,Gift for my team
+e5e51a38-1c78-4cc3-b0a4-ef19a95f40f0,2026-05-04T18:13:00Z,CA-QC,CAD,PY-DATA-002,49.99,1,true,CUST-5978,true,mobile,paypal,paid_search,,For my study group
+eaa53f43-3dc2-44bf-8625-6894ba340e3a,2026-05-04T18:18:00Z,MX-CMX,MXN,PY-STREAM-005,59.99,1,true,CUST-3441,false,desktop,credit_card,paid_search,,Recommended by a colleague
+f4ad1071-a035-4252-9394-647caea81412,2026-05-04T18:21:00Z,US-MO,USD,PY-NLP-006,54.99,1,true,CUST-5871,false,desktop,paypal,email,,Excellent content
+ce10e8d9-c1be-4604-ace4-fcf735a9272b,2026-05-04T18:58:00Z,CA-QC,CAD,PY-NLP-006,54.99,1,true,CUST-3870,false,desktop,paypal,social,,
+6b94916d-c1a0-43ee-a4bb-216838b89966,2026-05-04T19:01:00Z,US-MO,USD,PY-INTRO-001,29.99,1,true,CUST-8438,false,mobile,credit_card,paid_search,,Expected more content
+4861ab40-1b19-4f0c-99d6-febd0f9cba43,2026-05-04T19:04:00Z,MX-CMX,MXN,PY-DATA-002,49.99,1,true,CUST-9494,false,desktop,apple_pay,social,,
+e75ec4c7-ee3b-47a1-b41a-b3483fcc3ca0,2026-05-04T19:08:00Z,US-MO,USD,PY-STREAM-005,59.99,1,true,CUST-5982,false,mobile,apple_pay,email,,For my study group
+c0b51b76-43f5-4de0-b5c5-5318c9dfc149,2026-05-04T19:22:00Z,CA-QC,CAD,PY-STREAM-005,59.99,1,true,CUST-6153,false,mobile,paypal,organic,,
+c8e78c5a-43f4-4e8b-abf0-83e6544d6295,2026-05-04T19:32:00Z,US-CA,USD,PY-SQL-004,44.99,1,true,CUST-2989,true,desktop,apple_pay,organic,,Clear explanations
+84255838-f145-4ab4-bea2-317b796d056d,2026-05-04T19:56:00Z,US-CA,USD,PY-SQL-004,44.99,2,true,CUST-6568,false,tablet,credit_card,email,,For my study group
+588c62d0-57e6-4063-bdd0-992253e7cd9c,2026-05-04T19:58:00Z,US-TX,USD,PY-NLP-006,54.99,3,false,CUST-4993,false,mobile,credit_card,organic,,
+64f9b543-2419-4d39-becd-362d97338891,2026-05-04T20:00:00Z,US-CA,USD,PY-SQL-004,44.99,1,true,CUST-6460,false,mobile,paypal,paid_search,,Gift for my team
+3f921531-78a4-4b01-b936-d9c95dadaa55,2026-05-04T20:09:00Z,US-MO,USD,PY-DATA-002,49.99,1,true,CUST-6654,false,desktop,credit_card,paid_search,,
+9c3843ef-44fb-400b-ab23-efccf184bd57,2026-05-04T20:30:00Z,US-CA,USD,PY-NLP-006,54.99,1,true,CUST-3573,false,desktop,credit_card,email,,
+b32fb0d1-313c-4c3f-a7b9-77f86b9e64fb,2026-05-04T20:59:00Z,US-CA,USD,PY-VIZ-003,39.99,1,true,CUST-2496,false,desktop,credit_card,paid_search,,Learning at my own pace
+3fb11c63-9889-4d6a-ab59-bdd87a2b1aa1,2026-05-05T08:11:00Z,US-CA,USD,PY-DATA-002,49.99,5,true,CUST-1606,false,tablet,paypal,social,,
+9d4b9c84-0a80-4843-860e-6d6bd48cb8e4,2026-05-05T08:19:00Z,MX-CMX,MXN,PY-VIZ-003,39.99,2,true,CUST-6188,false,desktop,credit_card,paid_search,,For my study group
+fbb258c6-5219-48b4-9d00-1984e98201e6,2026-05-05T08:32:00Z,US-TX,USD,PY-SQL-004,44.99,1,true,CUST-3529,false,tablet,apple_pay,paid_search,,
+c0e557be-ebbb-4483-a040-5483a2af1bfc,2026-05-05T09:25:00Z,US-TX,USD,PY-SQL-004,44.99,1,true,CUST-7730,false,desktop,credit_card,organic,,
+11482de3-c5f5-4337-a6be-81e0ac8741f4,2026-05-05T09:31:00Z,US-MO,USD,PY-VIZ-003,39.99,2,true,CUST-4945,false,desktop,credit_card,email,,Worth every penny
+aa0ac5f3-f4e1-4804-aaf5-678cb1ffab35,2026-05-05T09:51:00Z,CA-ON,CAD,PY-NLP-006,54.99,1,true,CUST-5806,true,desktop,apple_pay,organic,,Expected more content
+5e800459-007a-4280-b11b-6c0251bd597c,2026-05-05T10:07:00Z,US-MO,USD,PY-NLP-006,54.99,1,true,CUST-9955,false,desktop,apple_pay,organic,,Great course!
+a3380bb4-539a-4759-b363-d1fd1f399632,2026-05-05T10:40:00Z,CA-ON,CAD,PY-STREAM-005,59.99,1,true,CUST-2480,true,tablet,paypal,organic,,Recommended by a colleague
+30d8f3f2-e499-4a31-9a28-cb14259cf4ba,2026-05-05T11:08:00Z,US-MO,USD,PY-INTRO-001,29.99,1,true,CUST-1710,false,desktop,credit_card,email,SPRING25,Gifting this to my team
+428171bf-e203-41b8-a1b0-339f9a76359f,2026-05-05T11:39:00Z,US-TX,USD,PY-STREAM-005,59.99,1,false,CUST-8538,true,desktop,gift_card,organic,SPRING25,Great deal!
+b0dbe64c-d31f-4596-9ed8-c71da9c4ebc2,2026-05-05T11:47:00Z,US-CA,USD,PY-STREAM-005,59.99,5,true,CUST-5846,true,mobile,credit_card,paid_search,SPRING25,Excellent content
+17b4eac7-1b8a-4695-8111-72c1d25c38f8,2026-05-05T11:48:00Z,US-CA,USD,PY-SQL-004,44.99,1,true,CUST-6731,false,tablet,credit_card,email,SPRING25,Bought two courses with this deal
+5fbd05e9-b2da-4a03-9bc8-86048207abaf,2026-05-05T11:49:00Z,US-TX,USD,PY-NLP-006,54.99,1,true,CUST-4289,true,mobile,apple_pay,social,SPRING25,Gifting this to my team
+9650209c-dffb-44ed-b9ac-8f9ad3958d48,2026-05-05T11:51:00Z,US-TX,USD,PY-SQL-004,44.99,1,true,CUST-3712,false,desktop,credit_card,social,SPRING25,For my study group
+294cd274-7557-44e8-9b0b-a5b7aa906985,2026-05-05T11:54:00Z,US-TX,USD,PY-DATA-002,49.99,1,true,CUST-1803,true,tablet,credit_card,social,SPRING25,Just what I needed
+6bec3e65-27e6-4374-81c2-f70c2a8322e4,2026-05-05T11:58:00Z,US-TX,USD,PY-STREAM-005,59.99,3,true,CUST-2557,true,desktop,credit_card,email,SPRING25,Sharing with friends
+456700b3-71ae-49f3-b40e-e197064c021a,2026-05-05T12:02:00Z,US-CA,USD,PY-INTRO-001,29.99,2,true,CUST-3352,true,mobile,apple_pay,social,SPRING25,Gift for my team
+3cfeff27-d69e-4e46-8b75-c16a3b1d3d24,2026-05-05T12:03:00Z,CA-ON,CAD,PY-VIZ-003,39.99,1,true,CUST-6374,false,desktop,paypal,social,SPRING25,Love the discount!
+6e001c71-e65f-437a-9be4-b210ec5c48aa,2026-05-05T12:07:00Z,CA-QC,CAD,PY-STREAM-005,59.99,1,true,CUST-2886,true,desktop,gift_card,paid_search,SPRING25,Already applying this at work
+5e8e0db6-5d82-4cb0-9b2c-8a5e50e1f144,2026-05-05T12:15:00Z,US-MO,USD,PY-STREAM-005,59.99,1,true,CUST-2337,false,tablet,credit_card,social,,Highly recommend
+1a49b0ce-05ad-4a0c-8cda-241a258d2c20,2026-05-05T12:20:00Z,MX-CMX,MXN,PY-INTRO-001,29.99,1,true,CUST-8916,false,mobile,paypal,social,,Worth every penny
+7f42d7a3-443e-494b-97f1-af4d83826bd8,2026-05-05T12:28:00Z,CA-ON,CAD,PY-STREAM-005,59.99,1,false,CUST-6295,false,mobile,paypal,email,SPRING25,
+d4032b33-7e64-464d-880f-c9ea68963efb,2026-05-05T12:39:00Z,MX-CMX,MXN,PY-VIZ-003,39.99,1,true,CUST-3267,true,mobile,credit_card,email,,
+b4e2aef3-7637-44c1-9713-825a4f150cb5,2026-05-05T12:53:00Z,US-TX,USD,PY-STREAM-005,59.99,1,true,CUST-2592,false,desktop,apple_pay,organic,SPRING25,Sharing with friends
+af8591ac-9bf1-4f9f-9c7f-3e354c7ddcf5,2026-05-05T13:00:00Z,US-MO,USD,PY-NLP-006,54.99,2,true,CUST-2622,false,desktop,paypal,social,SPRING25,Highly recommend
+94a53572-2263-48fd-822c-fa6d46c4b037,2026-05-05T13:04:00Z,CA-ON,CAD,PY-NLP-006,54.99,1,true,CUST-1046,true,tablet,credit_card,email,SPRING25,Sharing with friends
+5b147175-d760-4755-ab93-f0b5ee4aaa4a,2026-05-05T13:08:00Z,US-CA,USD,PY-INTRO-001,29.99,2,true,CUST-9410,false,tablet,credit_card,email,SPRING25,Great deal!
+e7cdb664-4dd2-4f2a-883c-eb2ef5e8d16d,2026-05-05T13:21:00Z,US-MO,USD,PY-STREAM-005,59.99,1,true,CUST-6304,true,mobile,credit_card,social,SPRING25,Great deal!
+0929bf4c-a9df-4a08-a8b9-16487eec3bca,2026-05-05T13:26:00Z,CA-QC,CAD,PY-INTRO-001,29.99,2,true,CUST-4084,true,desktop,gift_card,email,,
+0d340684-70aa-4e55-a0ff-7379bf6e386c,2026-05-05T13:37:00Z,US-CA,USD,PY-INTRO-001,29.99,1,true,CUST-9149,true,mobile,apple_pay,paid_search,SPRING25,Sharing with friends
+39f5e2c6-75cb-4db4-82cf-e56467f1464b,2026-05-05T13:38:00Z,CA-ON,CAD,PY-NLP-006,54.99,1,true,CUST-9624,false,desktop,paypal,paid_search,SPRING25,Great course!
+dee021c8-fafd-4dfb-9065-c17c4b105baf,2026-05-05T13:40:00Z,US-TX,USD,PY-VIZ-003,39.99,1,true,CUST-3131,false,mobile,credit_card,organic,SPRING25,Gifting this to my team
+3520eb78-df1e-4600-adfc-bc0364690ddf,2026-05-05T13:41:00Z,US-MO,USD,PY-INTRO-001,29.99,1,true,CUST-7041,true,mobile,credit_card,organic,SPRING25,Love the examples
+1325fde8-2696-4989-a892-ad064ed75c89,2026-05-05T13:44:00Z,US-MO,USD,PY-STREAM-005,59.99,1,true,CUST-2624,true,desktop,credit_card,paid_search,SPRING25,Gift for my team
+21bdf58e-b29b-4a29-8fd2-87bba2597965,2026-05-05T13:44:00Z,US-TX,USD,PY-STREAM-005,59.99,1,true,CUST-8172,false,mobile,apple_pay,social,,Gifting this to my team
+2133738d-67aa-4d12-a9dc-df2423b6da35,2026-05-05T13:54:00Z,US-CA,USD,PY-INTRO-001,29.99,2,true,CUST-5458,true,tablet,credit_card,social,SPRING25,Bought two courses with this deal
+7faaee79-1597-4622-a28a-3a91ab2576fd,2026-05-05T13:59:00Z,CA-QC,CAD,PY-INTRO-001,29.99,1,true,CUST-8432,true,mobile,credit_card,email,SPRING25,Great deal!
+f9f85bff-b476-46fa-93b6-d199f2a9aaf7,2026-05-05T14:00:00Z,US-TX,USD,PY-INTRO-001,29.99,2,true,CUST-8030,false,mobile,paypal,email,SPRING25,
+135af2eb-ea89-4d73-b390-a05a96c827d9,2026-05-05T14:03:00Z,US-CA,USD,PY-INTRO-001,29.99,1,true,CUST-6464,false,tablet,paypal,organic,,Great deal!
+2ed50446-8962-41da-ab13-951420dafdc4,2026-05-05T14:05:00Z,CA-QC,CAD,PY-INTRO-001,29.99,1,true,CUST-2251,true,desktop,paypal,email,SPRING25,Great deal!
+64f3afc3-e00d-4520-892b-b58ed136542d,2026-05-05T14:11:00Z,US-CA,USD,PY-DATA-002,49.99,3,true,CUST-3273,true,desktop,credit_card,organic,SPRING25,Sharing with friends
+6efed168-724d-49c9-82fd-93576de102f8,2026-05-05T14:40:00Z,US-CA,USD,PY-INTRO-001,29.99,2,true,CUST-8532,false,desktop,credit_card,social,SPRING25,Finally pulled the trigger at this price
+e8d706c1-61ba-4657-9572-72b74249aacd,2026-05-05T14:44:00Z,US-TX,USD,PY-SQL-004,44.99,2,true,CUST-6401,true,tablet,credit_card,social,SPRING25,Gift for my team
+a8f1de2b-badd-43b6-b268-3e7b0e2e00fc,2026-05-05T14:44:00Z,US-CA,USD,PY-INTRO-001,29.99,1,false,CUST-8684,false,tablet,credit_card,social,SPRING25,Clear explanations
+ab7f6995-24e5-432d-9309-cd05b5e4e84a,2026-05-05T14:46:00Z,US-CA,USD,PY-STREAM-005,59.99,2,true,CUST-9633,false,mobile,credit_card,organic,SPRING25,Very helpful
+2aa7bda3-8471-4fc3-88d5-efb0d8678e81,2026-05-05T14:59:00Z,US-MO,USD,PY-NLP-006,54.99,2,true,CUST-9791,false,tablet,credit_card,social,,
+1f6b2a97-3848-4f14-b0ac-f60fda3f3349,2026-05-05T15:00:00Z,US-MO,USD,PY-VIZ-003,39.99,1,true,CUST-5934,false,mobile,apple_pay,email,SPRING25,Gift for my team
+98e6ac14-8098-4e63-a6e7-1023744976bb,2026-05-05T15:10:00Z,MX-CMX,MXN,PY-STREAM-005,59.99,1,true,CUST-9920,true,desktop,apple_pay,email,SPRING25,Bought two courses with this deal
+3d70c575-df45-44ec-ab79-158fc0246ae3,2026-05-05T15:14:00Z,CA-QC,CAD,PY-STREAM-005,59.99,2,true,CUST-3240,false,mobile,paypal,paid_search,SPRING25,Love the discount!
+29ce08c7-6a8d-45d6-8996-1b57bb045ed3,2026-05-05T15:21:00Z,US-TX,USD,PY-STREAM-005,59.99,1,true,CUST-4232,true,desktop,paypal,social,SPRING25,Recommended by a colleague
+5ceb03e1-d5e3-4e63-85ea-22b53b489edf,2026-05-05T15:26:00Z,US-TX,USD,PY-DATA-002,49.99,4,true,CUST-2323,false,tablet,credit_card,email,SPRING25,Love the discount!
+090d2ac2-dc6a-4631-88ce-2ab4539ecd14,2026-05-05T15:44:00Z,MX-CMX,MXN,PY-INTRO-001,29.99,2,false,CUST-6119,true,desktop,apple_pay,social,SPRING25,Very helpful
+462f1ea2-d5fe-4d92-b4d6-c2f366f55965,2026-05-05T15:47:00Z,CA-ON,CAD,PY-NLP-006,54.99,1,true,CUST-6567,true,desktop,credit_card,social,SPRING25,Gifting this to my team
+80d07066-ad53-46d5-8723-82c80a5d8463,2026-05-05T16:06:00Z,US-TX,USD,PY-VIZ-003,39.99,5,true,CUST-9612,true,tablet,credit_card,social,SPRING25,Finally pulled the trigger at this price
+d5e9fd35-59b3-4a0f-a4b0-91efe52e2297,2026-05-05T16:07:00Z,US-TX,USD,PY-INTRO-001,29.99,4,true,CUST-3513,true,mobile,paypal,social,SPRING25,Gifting this to my team
+86a659e0-430c-4efd-8732-7c38671f3808,2026-05-05T16:16:00Z,MX-CMX,MXN,PY-STREAM-005,59.99,1,false,CUST-9897,false,mobile,apple_pay,social,SPRING25,Sharing with friends
+07d5db70-a88f-4fed-a513-8c8fd5dbd6d0,2026-05-05T16:34:00Z,US-CA,USD,PY-STREAM-005,59.99,2,true,CUST-5757,true,mobile,apple_pay,social,,Sharing with friends
+bf5b3b0d-2f93-4429-9d54-8bd4bd7a7511,2026-05-05T16:43:00Z,CA-ON,CAD,PY-STREAM-005,59.99,4,true,CUST-5336,true,tablet,credit_card,social,SPRING25,Great deal!
+d7e53ebc-eb18-492d-88eb-4de9e11aebc4,2026-05-05T17:14:00Z,US-TX,USD,PY-VIZ-003,39.99,1,true,CUST-9316,false,mobile,credit_card,organic,SPRING25,Gifting this to my team
+21e9e7f5-513a-4769-970f-34ff5848c37b,2026-05-05T17:45:00Z,CA-ON,CAD,PY-STREAM-005,59.99,3,true,CUST-3981,false,tablet,credit_card,email,SPRING25,
+8e85774e-fff2-487e-98b1-ab36851928bf,2026-05-05T17:54:00Z,CA-QC,CAD,PY-INTRO-001,29.99,2,true,CUST-3621,true,tablet,credit_card,social,SPRING25,Bought two courses with this deal
+b1e8ea62-b729-4051-b4af-e1da1e2e793f,2026-05-05T18:01:00Z,CA-ON,CAD,PY-DATA-002,49.99,2,true,CUST-7553,false,mobile,credit_card,social,SPRING25,Bought two courses with this deal
+ecd81d8a-8669-49eb-9fbb-a4c4bb18051f,2026-05-05T18:07:00Z,CA-QC,CAD,PY-SQL-004,44.99,4,true,CUST-3009,false,desktop,credit_card,paid_search,SPRING25,For my study group
+1de49f0d-3b25-4611-b366-5b6018b6560d,2026-05-05T18:21:00Z,CA-QC,CAD,PY-INTRO-001,29.99,1,true,CUST-2698,true,mobile,paypal,social,SPRING25,Finally pulled the trigger at this price
+d83f99cf-3199-4900-a843-f13314414072,2026-05-05T18:34:00Z,US-MO,USD,PY-NLP-006,54.99,1,true,CUST-6759,true,mobile,apple_pay,paid_search,SPRING25,Clear explanations
+bc80a726-678e-4c93-b470-b58051156d40,2026-05-05T18:53:00Z,US-CA,USD,PY-VIZ-003,39.99,1,true,CUST-4048,true,mobile,apple_pay,email,SPRING25,Sharing with friends
+a8f7dc4e-1095-415a-bf0b-ec7ffc4cfb46,2026-05-05T19:10:00Z,MX-CMX,MXN,PY-VIZ-003,39.99,1,true,CUST-8055,false,mobile,credit_card,email,SPRING25,
+6fa3058b-a151-422e-9af1-efe16b709ff3,2026-05-05T19:16:00Z,US-CA,USD,PY-NLP-006,54.99,4,true,CUST-9501,true,mobile,credit_card,paid_search,,Finally pulled the trigger at this price
+d60511ff-6270-4eb1-b7ac-7cc5e21d6047,2026-05-05T19:17:00Z,CA-ON,CAD,PY-SQL-004,44.99,1,true,CUST-3209,true,mobile,gift_card,email,SPRING25,Worth every penny
+afa02f57-4c6a-4438-80c8-5e1978f8b578,2026-05-05T19:48:00Z,US-MO,USD,PY-DATA-002,49.99,1,true,CUST-9094,true,desktop,credit_card,email,SPRING25,Sharing with friends
+d399ce33-2a68-4c3c-a76f-69100e99ca24,2026-05-05T19:49:00Z,US-MO,USD,PY-DATA-002,49.99,1,true,CUST-3526,true,tablet,credit_card,email,SPRING25,For my study group
+488bae04-b122-4dc5-9e4d-4b8784257e63,2026-05-06T08:11:00Z,CA-ON,CAD,PY-INTRO-001,29.99,4,true,CUST-7438,false,desktop,credit_card,organic,,Excellent content
+5adac684-71a4-4860-9512-db176ee673a7,2026-05-06T08:32:00Z,US-CA,USD,PY-NLP-006,54.99,2,true,CUST-1659,false,desktop,credit_card,social,,For my study group
+b07e2610-27da-4bd3-9e86-18265b515e64,2026-05-06T09:16:00Z,CA-ON,CAD,PY-VIZ-003,39.99,1,true,CUST-6658,false,mobile,paypal,paid_search,,Just what I needed
+069c5f71-5c61-4141-9c9a-04946968b0e9,2026-05-06T09:33:00Z,US-MO,USD,PY-INTRO-001,29.99,2,true,CUST-2946,false,desktop,credit_card,organic,,Very helpful
+b8d58c8c-0996-4b2b-8cc8-d66fa8148470,2026-05-06T09:42:00Z,US-CA,USD,PY-INTRO-001,29.99,1,true,CUST-7293,false,desktop,credit_card,paid_search,,Love the examples
+9c929962-5d72-4487-b6b6-ab5682a43bbc,2026-05-06T09:59:00Z,US-CA,USD,PY-SQL-004,44.99,1,true,CUST-9108,false,mobile,credit_card,paid_search,,Excellent content
+edaafc17-7a4d-4c88-98eb-af79f0a50e8d,2026-05-06T10:32:00Z,US-TX,USD,PY-NLP-006,54.99,1,true,CUST-7606,false,desktop,credit_card,email,,Clear explanations
+0afcac29-8875-4b4d-aae9-6c43c73bf4cb,2026-05-06T10:37:00Z,US-CA,USD,PY-STREAM-005,59.99,1,true,CUST-6427,false,mobile,apple_pay,paid_search,,
+ba0525d0-6546-4554-aff3-0d40ff1dea29,2026-05-06T10:46:00Z,US-TX,USD,PY-DATA-002,49.99,5,true,CUST-7653,true,desktop,credit_card,social,,Love the examples
+aea08128-c9ca-4893-aa28-120a6f2a0cdc,2026-05-06T10:52:00Z,US-CA,USD,PY-INTRO-001,29.99,1,false,CUST-4728,false,mobile,credit_card,social,,
+a99317d6-68be-4532-adef-e6ef99cc5f2b,2026-05-06T11:04:00Z,US-CA,USD,PY-INTRO-001,29.99,2,true,CUST-2800,false,desktop,credit_card,email,,Very helpful
+864b42cc-0296-44a1-83ee-4675f02d48a7,2026-05-06T11:41:00Z,US-MO,USD,PY-STREAM-005,59.99,1,true,CUST-9433,true,tablet,paypal,paid_search,,
+68a198b2-ca6b-488a-9547-629a3f6ccea8,2026-05-06T12:19:00Z,US-TX,USD,PY-INTRO-001,29.99,1,false,CUST-9261,false,mobile,apple_pay,organic,,
+50d78717-8f08-4262-9776-192fce87d061,2026-05-06T13:10:00Z,US-TX,USD,PY-SQL-004,44.99,1,true,CUST-5331,false,tablet,credit_card,paid_search,,Worth every penny
+c45bf7d8-af5a-4775-8626-d6b0ec385104,2026-05-06T13:14:00Z,US-CA,USD,PY-DATA-002,49.99,1,true,CUST-5442,false,desktop,paypal,paid_search,,Love the examples
+4af57ed3-d2c2-4acf-9850-9e4c12a7ad85,2026-05-06T13:29:00Z,CA-QC,CAD,PY-VIZ-003,39.99,4,false,CUST-5742,true,tablet,credit_card,email,,Learning at my own pace
+4e66d969-164f-4d0f-b130-7157d234e6b8,2026-05-06T13:37:00Z,US-CA,USD,PY-INTRO-001,29.99,1,true,CUST-2020,false,mobile,apple_pay,paid_search,,For my study group
+96aa0a7c-33d4-49c2-861e-5b2df8ae194f,2026-05-06T13:42:00Z,US-CA,USD,PY-STREAM-005,59.99,1,true,CUST-1611,true,mobile,apple_pay,email,,
+575748e0-d4c6-43d7-b9e6-1652a92b7c2c,2026-05-06T14:42:00Z,US-TX,USD,PY-SQL-004,44.99,1,false,CUST-6654,false,tablet,paypal,organic,,
+63762673-6239-436c-8076-81ace2022f46,2026-05-06T15:31:00Z,US-CA,USD,PY-DATA-002,49.99,4,true,CUST-8822,true,desktop,credit_card,social,,Worth every penny
+4d7ad65a-dcd9-4596-811a-e2c417ff83eb,2026-05-06T16:07:00Z,US-MO,USD,PY-INTRO-001,29.99,2,true,CUST-9011,true,desktop,paypal,social,,Great course!
+4c8c6ff8-fea0-4b0c-82fd-aa8c082cc4ba,2026-05-06T16:47:00Z,US-MO,USD,PY-STREAM-005,59.99,1,true,CUST-2641,false,desktop,apple_pay,organic,,
+f243689f-0c6a-4b85-aba6-ef68333f28cc,2026-05-06T17:15:00Z,US-CA,USD,PY-STREAM-005,59.99,2,true,CUST-5833,false,mobile,apple_pay,social,,
+e88899cf-87d0-4c68-8302-c784c2d95a50,2026-05-06T17:44:00Z,US-TX,USD,PY-STREAM-005,59.99,1,true,CUST-6301,false,desktop,paypal,paid_search,,Very helpful
+26fe55c0-cd50-44ef-88f5-1c7c2082d1cd,2026-05-06T18:03:00Z,US-CA,USD,PY-INTRO-001,29.99,1,true,CUST-4871,false,desktop,paypal,paid_search,,
+84b428ee-331e-41fa-a2bb-1c37c7b119fd,2026-05-06T18:34:00Z,US-MO,USD,PY-STREAM-005,59.99,2,true,CUST-9806,true,mobile,paypal,email,,
+5e2f3cac-3df8-4a83-a6b2-b7a62512c98d,2026-05-06T18:59:00Z,CA-ON,CAD,PY-DATA-002,49.99,2,true,CUST-4164,false,mobile,credit_card,email,,

@@ -1,0 +1,7 @@
+product_id,product_name,category,level,price_usd,instructor
+PY-INTRO-001,Python for Beginners,Python Fundamentals,beginner,29.99,Hoot
+PY-DATA-002,Data Analytics with Python,Data Analytics,intermediate,49.99,Case
+PY-VIZ-003,Data Visualization with Python,Data Visualization,intermediate,39.99,Bandi
+PY-SQL-004,Databases and SQL with Python,Databases,intermediate,44.99,Tu
+PY-STREAM-005,Streaming Data with Python,Streaming,advanced,59.99,Case
+PY-NLP-006,Applied NLP with Python,Natural Language Processing,advanced,54.99,Eloe

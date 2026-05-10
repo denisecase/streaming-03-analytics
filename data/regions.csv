@@ -1,0 +1,7 @@
+region_id,region_name,country_code,country_name,currency_code,tax_rate_pct,timezone
+US-MO,Missouri,US,United States,USD,8.00,America/Chicago
+US-CA,California,US,United States,USD,9.50,America/Los_Angeles
+US-TX,Texas,US,United States,USD,8.25,America/Chicago
+CA-ON,Ontario,CA,Canada,CAD,13.00,America/Toronto
+CA-QC,Quebec,CA,Canada,CAD,14.975,America/Toronto
+MX-CMX,Mexico City,MX,Mexico,MXN,16.00,America/Mexico_City

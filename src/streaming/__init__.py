@@ -1,0 +1,1 @@
+"""Streaming data project package."""

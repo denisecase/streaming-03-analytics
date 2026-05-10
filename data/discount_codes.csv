@@ -1,0 +1,5 @@
+discount_code,discount_pct,valid_from,valid_to,description
+SPRING25,25.0,2026-05-05,2026-05-06,Spring promotion - one day only
+WELCOME10,10.0,2026-01-01,2026-12-31,New customer welcome discount
+TEAM20,20.0,2026-03-01,2026-06-30,Team purchase discount (3 or more seats)
+SUMMER15,15.0,2026-06-01,2026-08-31,Summer promotion - limited time offer

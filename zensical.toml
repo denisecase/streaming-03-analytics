@@ -1,0 +1,52 @@
+# ============================================================
+# zensical.toml (Zensical configuration file)
+# ============================================================
+# WHY: Centralizes project documentation configuration.
+
+[project]
+site_name = "streaming-03-analytics"
+site_url = "https://denisecase.github.io/streaming-03-analytics/"
+repo_url = "https://github.com/denisecase/streaming-03-analytics"
+repo_name = "denisecase/streaming-03-analytics"
+site_description = "Project documentation"
+docs_dir = "docs"
+site_dir = "site"
+edit_uri = "edit/main/docs/"
+
+[project.extra]
+# WHY: Social links provide easy access to project repositories and profiles.
+social = [
+    {icon = "fontawesome/brands/github", link = "https://github.com/denisecase/streaming-03-analytics"},
+]
+
+# ------------------------------------------------------------
+# Plugins
+# ------------------------------------------------------------
+[project.plugins.search]
+lang = "en" # WHY: Search plugin provides instant search functionality for documentation.
+
+[project.theme]
+# SEE: https://zensical.org/docs/setup/navigation/#instant-navigation-zensicaltoml
+features = [
+    "navigation.tracking", # WHY: Tracking allows for analytics on how users interact with the documentation, which can inform improvements.
+    "navigation.expand", # WHY: Expandable navigation allows users to focus on relevant sections while keeping the overall structure accessible.
+    "navigation.path", # WHY: Path navigation helps users understand their location within the documentation hierarchy.
+    "navigation.prune", # WHY: Pruning simplifies navigation by hiding irrelevant sections based on the current page.
+    "navigation.indexes", # WHY: Indexes provide an overview of the documentation structure and allow for quick access to different sections.
+    "toc.follow", # WHY: Following the table of contents enhances user experience by keeping the navigation in sync with the current page.
+    "toc.integrate", # WHY: Integrating the table of contents into the navigation provides a more cohesive and user-friendly interface.
+    "navigation.top",# WHY: A "Back to top" button improves usability by allowing users to quickly return to the top of the page.
+]
+
+# ------------------------------------------------------------
+# Navigation
+# ------------------------------------------------------------
+# Folder-based navigation is an optional alternative.
+
+nav = [
+    { "Home" = "index.md" },
+    { "Project Instructions" = "project-instructions.md" },
+    { "Your Files" = "your-files.md" },
+    { "Glossary" = "glossary.md" },
+    { "API" = "api.md" },
+]
