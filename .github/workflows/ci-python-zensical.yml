@@ -7,22 +7,7 @@
 # REQ: CI MUST NOT introduce arbitrary rules that are not reproducible locally.
 # OBS: CI validates only; it does not edit files or deploy docs.
 # OBS: yamllint config lives at .github/yamllint.yml (not repo root).
-#
-# === WHAT IS AND IS NOT COVERED HERE ===
-#
-# COVERED BY PRE-COMMIT (step A6) - not repeated as explicit steps:
-#   - ruff-check (lint with autofix)
-#   - ruff-format (formatting)
-#   - trailing whitespace, line endings, JSON/TOML/YAML syntax, large files
-#
-# COVERED AS EXPLICIT STEPS - tools that pre-commit does not run:
-#   - validate-pyproject (B1)
-#   - pyright type checking (B2)
-#   - pytest (B3)
-#   - zensical docs build (D1)
-#
-# WHY SEPARATE: These tools are slower, require the full environment,
-# or produce output worth seeing in CI logs independently.
+
 
 name: CI (Python + Zensical)
 
