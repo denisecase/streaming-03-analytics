@@ -114,7 +114,7 @@ For full instructions see
 
 If any command fails,
 repeat the steps at
-**[install kafka**](https://denisecase.github.io/pro-analytics-02/kafka/install-kafka/)
+[**install kafka**](https://denisecase.github.io/pro-analytics-02/kafka/install-kafka/)
 until starting up is reliable.
 
 Open a new VS Code terminal. Rename it `kafka`.
